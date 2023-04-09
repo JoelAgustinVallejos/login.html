@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        input, select {
+          width: 90%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          border: 1px solid #ff0000;
+          border-radius: 10px;
+          text-align: center;
+        }
+        
+        input[type=submit] {
+          width: 97%;
+          background-color: #030202;
+          color: rgb(243, 242, 242);
+          border: none;
+          border-radius: 10px;
+          cursor: pointer;
+        }
+        
+        input[type=submit]:hover {
+          background-color: #ff0000;
+        }
+        
+        div {
+          border-radius: 50px;
+          background-color: #582b2b00;
+          margin: 35px;
+        }
+
+        h3 {
+          text-align: center;
+          color: white;
+          font-size: 24px;
+        }
+
+        label {
+          font-size: 18px;
+          color: #fffdfd;
+        }
+
+        body{
+          background-image: linear-gradient(to right, rgb(237, 0, 245), rgb(4, 8, 255));
+        }
+
+
+        .wrapper {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 10px;
+          grid-auto-rows: 200px;
+          grid-template-areas:
+            ". a a ."
+            ". a a .";
+        }
+        .item1 {
+          grid-area: a;
+          align-self: center;
+          justify-self: center;
+        }
+
+    </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="item1">
+
+      <h3>LOGIN</h3>
+
+        <form id="login_form" action="/login_page.php" method="post">
+          <label for="user_name">  Usuario  </label>
+          <input type="text" id="user_name" name="user_name" placeholder="Ingrese nombre.." required>
+      
+          <label for="pass">  Contraseña  </label>
+          <input type="password" id="pass" name="pass" placeholder="Ingrese contraseña.." required>
+      
+          <input type="submit" value="Enviar">
+        </form>
+    </div> 
+  </div>
+</body>
+</html>
